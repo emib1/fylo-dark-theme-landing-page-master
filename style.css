@@ -1,2 +1,303 @@
-tiujfgufhggh
-nccgjcfv
+/*--------------        Global styles                 --------------------- */
+* {  
+    font-size: 100%;
+    box-sizing: border-box;
+    border: none;
+    /* outline: none; */
+    text-decoration: none;
+    list-style: none;
+  }
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: hsl(218, 28%, 13%) ;
+    color: hsl(0, 0%, 100%);
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3,.btn-page{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "intro intro intro"
+      "benefits benefits benefits"
+      "info info info"
+      "comments comments comments"
+      "sign-up sign-up sign-up";
+  }
+/*--------------         NAV part                     --------------------- */
+
+.header {
+    grid-area: header;
+    padding: 50px 3%;
+    flex-wrap: wrap;
+  }
+
+nav li {
+  float: right;
+  margin: 10px 16px;
+    
+}
+nav li a {
+    color:  hsl(0, 0%, 100%);
+    font-weight: 50;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*--------------          intro                       --------------------- */
+  .intro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  background-color: hsl(217, 28%, 15%);
+  text-align: center;
+}
+
+.intro p {
+   font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    max-width: 420px;
+    line-height: 1.5rem;
+}
+
+.intro h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2.8rem;
+    font-size: 1.875rem;
+    max-width: 660px;
+} 
+  
+.btn-page {
+ background-color:hsl(176, 68%, 64%) ;
+ color:hsl(0, 0%, 100%); 
+ padding: 15px 40px;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+ border-radius:  30px 30px 30px 30px;
+}
+ 
+
+/*--------------          benefit                     --------------------- */
+ .benefits{
+   grid-area: benefits;
+   display: flex;
+   justify-content: center; 
+   margin-bottom: 120px;
+   flex-direction:row ;
+   text-align: center;
+   background-image: url(images/bg-curvy-desktop.svg);
+   background-repeat: no-repeat;
+	 background-size: contain;
+	 background-position: bottom;
+ }
+/*--------------          info                        --------------------- */
+.info{
+  grid-area: info;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+  flex-direction: row;
+  grid-row-gap: 20%; 
+  grid-column-gap: 2%;
+}
+.info h2{
+  font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2.8rem;
+    font-size: 1.875rem;
+    max-width: 660px;
+}
+
+.info p {
+   font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    max-width: 420px;
+    line-height: 1.5rem;
+}
+/*--------------          comments                    --------------------- */
+.comments{
+  grid-area: comments;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+  flex-direction: row; 
+  gap: 4%;
+  position: relative;
+}
+.quotes {
+  height: 45px;
+  top: -35px;
+  position: absolute;
+  left: 5px;
+  z-index: 1;
+
+}
+.comments-box{
+  max-width: 340px;
+  min-height: 200px;
+  background-color: hsl(219, 30%, 18%);
+  box-shadow: 3px 3px 1px 5px #1c2230;
+  z-index: 2;
+  margin: 0px 40px 0px 40px;
+}
+.comments-box img {
+  width: 7%;  
+  border-radius: 50%;
+  margin-left: 25px;
+}
+.comments-box > p {
+  padding: 13% 8% 10% 9%;
+}
+.people {
+  display: flex;
+  align-items: center;
+}
+.people p {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+/*--------------           sign up                    --------------------- */
+.sign-up{
+   background-color:  hsl(217, 28%, 15%);
+   grid-area: sign-up;
+   min-height: 275px;
+   max-width: 865px;
+   width: 80%;
+   justify-content: center;
+   box-shadow: 3px 3px 1px 5px #1c2230;
+   margin: 0 auto -110px auto;
+   border-radius: 5px;
+   z-index: 2;
+    /* text-align: center; */
+}
+
+.sign-up h2 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 50px;
+}
+.sign-up p{
+  text-align: center;
+  padding: 30px 125px;
+}
+
+.sign-up .btn-page {
+  max-width: 200px;
+  width: 40%;
+  height: 40px;
+  margin-left: 20px;
+  padding: 0 10px;
+  font-size: 14px;
+
+}
+
+.sign-up input {
+  color:hsl(0, 0%, 100%); 
+  padding: 10px 80px;
+  border-radius: 40px;
+  max-width: 480px;
+  width: 65%;
+}
+.sign-up div {
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+}
+/*--------------       contact info                   --------------------- */
+.social-networks a img {
+  width: 35%;
+  margin: 10px;
+  display:block;
+  float:left;
+	margin-left:2px;
+
+}
+
+.footer {
+  z-index: 1;
+  grid-area: footer;
+  min-height: 515px;
+  background-color: var(--bg-footer-dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+.logo-footer {
+  display: flex;
+  width: 50%;
+  margin-right: 40%;
+}
+
+
+.footer-box {
+  display: flex;
+  margin-top: 20px;
+  width: 60%;
+  margin-right: 30%;
+}
+
+.contact {
+  margin-left: 7%;
+  margin-right: 10%;
+  display: flex;
+  max-width: 170px;
+  flex-wrap: wrap;
+  height: 90px;
+}
+
+.footer a {
+color:white;
+}
+
+.nav-help ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
+
+.nav-help li {
+  width: 128px;
+  margin-bottom: 20px;
+}
+.navhelp ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
+
+.navhelp li {
+  width: 128px;
+  margin-bottom: 20px;
+}
